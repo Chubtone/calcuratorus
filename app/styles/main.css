@@ -59,6 +59,17 @@ body {
   margin-top: 28px;
 }
 
+.keypad-row{
+  padding: 10px 0 0 0;
+}
+.btnRoman{
+  width: 100%;
+}
+
+.btnAlphaNumeric{
+  width: 30px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
