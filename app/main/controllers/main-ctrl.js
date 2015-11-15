@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc function
  * @name calcuratorusApp.controller:MainCtrl
@@ -8,10 +6,17 @@
  * Controller of the calcuratorusApp
  */
 angular.module('calcuratorusApp')
-	.controller('MainCtrl', function () {
-		this.awesomeThings = [
-			'HTML5 Boilerplate',
-			'AngularJS',
-			'Karma'
-		];
-	});
+    .controller('MainCtrl', ['$rootScope', '$scope',
+        function mainCtrl($rootScope, $scope) {
+            'use strict';
+
+            this.awesomeThings = [
+                'HTML5 Boilerplate',
+                'AngularJS',
+                'Karma'
+            ];
+
+            $scope.displayValue = '123';
+        }
+
+    ]);

@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc function
  * @name calcuratorusApp.controller:AboutCtrl
@@ -8,10 +6,11 @@
  * Controller of the calcuratorusApp
  */
 angular.module('calcuratorusApp')
-	.controller('AboutCtrl', function () {
-		this.awesomeThings = [
-			'HTML5 Boilerplate',
-			'AngularJS',
-			'Karma'
-		];
-	});
+    .controller('AboutCtrl', function() {
+        'use strict';
+        this.awesomeThings = [
+            'HTML5 Boilerplate',
+            'AngularJS',
+            'Karma'
+        ];
+    });

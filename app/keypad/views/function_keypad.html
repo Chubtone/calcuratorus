@@ -1,0 +1,39 @@
+<div class="keypad">
+  <div class="row">
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-primary btn-keypad"
+              value='/'
+              ng-click="handleFunction($event)">&divide;</button>
+    </div>
+  </div>
+  <div class="row keypad-row">
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-primary btn-keypad"
+              value='*'
+              ng-click="handleFunction($event)">&times;</button>
+    </div>
+  </div>
+  <div class="row keypad-row">
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-primary btn-keypad"
+              value='-'
+              ng-click="handleFunction($event)">&minus;</button>
+    </div>
+  </div>
+  <div class="row keypad-row">
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-primary btn-keypad"
+              value='+'
+              ng-click="handleFunction($event)">&plus;</button>
+    </div>
+  </div>
+
+  <div class="row keypad-row">
+    <div class="col-sm-6">
+      <button type="button" class="btn btn-primary btn-keypad"
+              value='='
+              ng-click="handleEquals()">&equals;</button>
+    </div>
+  </div>
+
+</div>

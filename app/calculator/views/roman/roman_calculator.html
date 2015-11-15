@@ -1,0 +1,20 @@
+
+
+<div class="jumbotron" ng-controller="NumericToRomanCtrl">
+  <div class="displayContainer">
+        <input id="displayValue" ng-value="displayValue"></input>
+  </div>
+
+  <div class="pad">
+    <input ng-model="transferAmount" field="currencyVal" currency-input type="tel"
+           class="typeNumber"
+           placeholder="0.00"/>
+
+  </div>
+  <div class="container" style="width: 800px">
+    <div class="row">
+      <div class="col-sm-8" ng-include="'keypad/views/roman_keypad.html'"></div>
+      <div class="col-sm-4" ng-include="'keypad/views/function_keypad.html'"></div>
+    </div>
+  </div>
+</div>

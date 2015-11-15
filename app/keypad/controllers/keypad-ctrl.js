@@ -1,22 +1,25 @@
-angular.module('calcuratorusApp').controller('KeyPadCtrl', function ($scope) {
-	$scope.singleModel = 1;
+angular.module('calcuratorusApp').controller('KeyPadCtrl', function($scope) {
 
-	$scope.radioModel = 'Middle';
+    "use strict";
 
-	$scope.checkModel = {
-		left: false,
-		middle: true,
-		right: false
-	};
+    $scope.singleModel = 1;
 
-	$scope.checkResults = [];
+    $scope.radioModel = 'Middle';
 
-	$scope.$watchCollection('checkModel', function () {
-		$scope.checkResults = [];
-		angular.forEach($scope.checkModel, function (value, key) {
-			if (value) {
-				$scope.checkResults.push(key);
-			}
-		});
-	});
+    $scope.checkModel = {
+        left: false,
+        middle: true,
+        right: false
+    };
+
+    $scope.checkResults = [];
+
+    $scope.$watchCollection('checkModel', function() {
+        $scope.checkResults = [];
+        angular.forEach($scope.checkModel, function(value, key) {
+            if (value) {
+                $scope.checkResults.push(key);
+            }
+        });
+    });
 });

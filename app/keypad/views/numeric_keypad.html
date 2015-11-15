@@ -1,91 +1,62 @@
-<div class="container" style="width: 400px">
-
-
+<div class="container keypad-container">
   <div class="row">
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman">
-        1
-      </button>
+      <button type="button" class="btn btn-primary btnRoman" value='1'
+              ng-click="handleKeypadInput($event)">1</button>
     </div>
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman"
-              ng-model="singleModel">
-        2
-      </button>
+      <button type="button" class="btn btn-primary btnRoman" value='2'
+              ng-click="handleKeypadInput($event)">2</button>
     </div>
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman"
-              ng-model="singleModel">
-        3
-      </button>
+      <button type="button" class="btn btn-primary btnRoman" value='3'
+              ng-click="handleKeypadInput($event)">3</button>
     </div>
   </div>
   <div class="row keypad-row">
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman"
-              ng-model="singleModel">
-        4
-      </button>
+      <button type="button" class="btn btn-primary btnRoman" value='4'
+              ng-click="handleKeypadInput($event)">4</button>
     </div>
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman"
-              ng-model="singleModel"
-              uib-btn-checkbox
-              btn-checkbox-true="1"
-              btn-checkbox-false="0">
-        5
-      </button>
+      <button type="button" class="btn btn-primary btnRoman" value='5'
+              ng-click="handleKeypadInput($event)">5</button>
     </div>
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman"
-              ng-model="singleModel"
-              uib-btn-checkbox
-              btn-checkbox-true="1"
-              btn-checkbox-false="0">
-        6
-      </button>
+      <button type="button" class="btn btn-primary btnRoman" value='6'
+              ng-click="handleKeypadInput($event)">6</button>
     </div>
   </div>
   <div class="row keypad-row">
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman"
-              ng-model="singleModel"
-              uib-btn-checkbox
-              btn-checkbox-true="1"
-              btn-checkbox-false="0">
-        7
-      </button>
+      <button type="button" class="btn btn-primary btnRoman" value='7'
+              ng-click="handleKeypadInput($event)">7</button>
     </div>
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman"
-              ng-model="singleModel"
-              uib-btn-checkbox
-              btn-checkbox-true="1"
-              btn-checkbox-false="0">
-        8
-      </button>
+      <button type="button" class="btn btn-primary btnRoman" value='8'
+              ng-click="handleKeypadInput($event)">8</button>
     </div>
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman"
-              ng-model="singleModel"
-              uib-btn-checkbox
-              btn-checkbox-true="1"
-              btn-checkbox-false="0">
-        9
-      </button>
+      <button type="button" class="btn btn-primary btnRoman" value='9'
+              ng-click="handleKeypadInput($event)">9</button>
     </div>
   </div>
 
   <div class="row keypad-row">
-    <div class="col-sm-12">
-      <button type="button" class="btn btn-primary btnRoman"
-              ng-model="singleModel"
-              uib-btn-checkbox
-              btn-checkbox-true="1"
-              btn-checkbox-false="0">
-       Clear
-      </button>
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-primary btnRoman" value='clear'
+              ng-click="handleKeypadClear()">Clear</button>
     </div>
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-primary btnRoman" value='0'
+              ng-click="handleKeypadInput($event)">0</button>
+    </div>
+    <!--<div class="col-sm-4">
+      <button type="button" class="btn btn-primary btnRoman"
+              value='equals'
+              ng-click="handleEquals()">=</button>
+    </div> -->
+
   </div>
 
 </div>

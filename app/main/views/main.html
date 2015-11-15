@@ -1,13 +1,24 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-
-  <div ng-include="'keypad/views/numeric_keypad.html'">
-
-  </div>
-
-</div>
-
 <form>
   <switch id="enabled" name="enabled" ng-model="enabled" class="green"></switch>
-  <br>{{ enabled }}
+  <br>Enabled: {{ enabled }}
 </form>
+<uib-tabset>
+
+
+  <hr/>
+
+  <uib-tab heading="Number To Roman Calculator">
+    <div ng-include="'calculator/views/numeric/numeric_calculator.html'"></div>
+  </uib-tab>
+
+  <uib-tab heading="Roman To Number Calculator">
+
+    <div ng-include="'calculator/views/roman/roman_calculator.html'"></div>
+  </uib-tab>
+
+</uib-tabset>
+
+<hr/>
+
+
+

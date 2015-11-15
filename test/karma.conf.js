@@ -34,6 +34,7 @@ module.exports = function(config) {
       'bower_components/lodash/lodash.js',
       'bower_components/angular-ui-switch/angular-ui-switch.js',
       'bower_components/bootstrap/dist/js/bootstrap.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/main/app.js",
