@@ -17,6 +17,8 @@ version 0.14.0.
 - Run `grunt` for building and `grunt serve` for preview.
 - Run `grunt jsbeautifier` to format the JavaScript files in the app
 - Run `grunt ngtemplates` to convert all of the HTML partials used in the app to JSON, and add them to the Angular $templateCache. (More here: https://docs.angularjs.org/api/ng/service/$templateCache). This allows the HTML partials to compressed, loaded into the client on app startup, and avoids the overhead of multiple HTTP requests to the web server.
+- Run `grunt jshint` to run jshint and check for common coding mistakes in the JavaScript codes
+
 
 ## Running the app
 - Enter values between 1 and 4999 either by the keypad or the input box.

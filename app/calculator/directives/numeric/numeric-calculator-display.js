@@ -3,8 +3,8 @@
  Usage : <input .....currency-input.. </input> --In this case I'll ensure that this field will contain only numeric values and format the value with decimal places
  */
 angular.module('calcuratorusApp')
-    .directive('numericDisplay', ['$compile', '$log', '$timeout', '_',
-        function($compile, $log, $timeout, _) {
+    .directive('numericDisplay', ['$compile', '$log',
+        function($compile, $log) {
             "use strict";
 
             return {
@@ -35,7 +35,7 @@ angular.module('calcuratorusApp')
 
                     scope.numericCalculatorCtrl = numericCalculatorCtrl;
 
-                    element.on('keyup', function(e) {
+                    element.on('keyup', function() {
                         var inputVal,
                             inputEle = element.find('input');
                         inputVal = inputEle.val();

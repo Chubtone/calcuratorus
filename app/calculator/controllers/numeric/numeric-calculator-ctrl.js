@@ -16,10 +16,29 @@ angular.module('calcuratorusApp')
                 $scope.$broadcast('receivedMathFunctionRequest', null);
             };
 
+            var parseValueRange = function(value) {
+                var result = null;
+
+                if (_.isNumber(value)) {
+                    if (utils.isInteger(value)) {
+                        if (!_.inRange(value, 1, 4999)) {
+                            result = 'Value beyond limit of 1 to 4999 (' + value + ')';
+                        } else {
+                            result = parseInt(value);
+                        }
+                    } else {
+                        result = 'Invalid Entry: ' + value;
+                    }
+                } else if (_.isNaN(value)) {
+                    result = 'Non est numerus';
+                }
+                return result;
+            };
+
             var executeMathFunction = function() {
                 var result = null;
                 if ($scope.inputValues.length === 1) {
-                    result = ($scope.inputValues[0]);
+                    result = parseValueRange($scope.inputValues[0]);
                 } else if ($scope.mathOperation && $scope.inputValues.length === 2) {
 
                     switch ($scope.mathOperation) {
@@ -40,20 +59,8 @@ angular.module('calcuratorusApp')
                             break;
                     }
 
-                    if (_.isNumber(result)) {
-                        if (utils.isInteger(result)) {
-                            if (!_.inRange(result, 0, 4999)) {
-                                result = 'Value beyond limit of 1 to 4999 (' + result + ')';
-                                $scope.inputValues = [];
-                            } else {
-                                result = parseInt(result);
-                            }
-                        } else {
-                            result = 'Invalid Entry: ' + result;
-                            $scope.inputValues = [];
-                        }
-                    } else if (_.isNaN(result)) {
-                        result = 'Non est numerus';
+                    result = parseValueRange(result);
+                    if (!_.isNumber(result)) {
                         $scope.inputValues = [];
                     }
 
@@ -94,7 +101,7 @@ angular.module('calcuratorusApp')
                 var result = executeMathFunction();
 
                 if (result) {
-                    if (_.isNumber(result)) {
+                    if (_.isNumber(result) && _.isFinite(result)) {
                         var convertedValue = roman_numeral_conversion.covertNumberToRoman(result);
                         $scope.$broadcast('valueConverted', convertedValue);
                         $scope.$broadcast('receivedKeypadValue', result);
