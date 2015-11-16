@@ -430,6 +430,9 @@ module.exports = function (grunt) {
     //Read jshint from ext file
     jshint: require('./grunt//grunt-jshint')(grunt),
 
+    //Read karma from ext file
+    karma: require('./grunt//grunt-karma')(grunt),
+
   });
 
 

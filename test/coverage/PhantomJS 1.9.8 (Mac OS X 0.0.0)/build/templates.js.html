@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for build/templates.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">build/</a> templates.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/14</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">angular.module('calcuratorusApp').run(['$templateCache', function($templateCache) {
+    'use strict';
+&nbsp;
+    $templateCache.put('404.html',
+        "&lt;!doctype html&gt;&lt;html lang=en&gt;&lt;head&gt;&lt;meta charset=utf-8&gt;&lt;title&gt;Page Not Found :(&lt;/title&gt;&lt;style&gt;::-moz-selection {\n" +
+        "        background: #b3d4fc;\n" +
+        "        text-shadow: none;\n" +
+        "      }\n" +
+        "\n" +
+        "      ::selection {\n" +
+        "        background: #b3d4fc;\n" +
+        "        text-shadow: none;\n" +
+        "      }\n" +
+        "\n" +
+        "      html {\n" +
+        "        padding: 30px 10px;\n" +
+        "        font-size: 20px;\n" +
+        "        line-height: 1.4;\n" +
+        "        color: #737373;\n" +
+        "        background: #f0f0f0;\n" +
+        "        -webkit-text-size-adjust: 100%;\n" +
+        "        -ms-text-size-adjust: 100%;\n" +
+        "      }\n" +
+        "\n" +
+        "      html,\n" +
+        "      input {\n" +
+        "        font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n" +
+        "      }\n" +
+        "\n" +
+        "      body {\n" +
+        "        max-width: 500px;\n" +
+        "        padding: 30px 20px 50px;\n" +
+        "        border: 1px solid #b3b3b3;\n" +
+        "        border-radius: 4px;\n" +
+        "        margin: 0 auto;\n" +
+        "        box-shadow: 0 1px 10px #a7a7a7, inset 0 1px 0 #fff;\n" +
+        "        background: #fcfcfc;\n" +
+        "      }\n" +
+        "\n" +
+        "      h1 {\n" +
+        "        margin: 0 10px;\n" +
+        "        font-size: 50px;\n" +
+        "        text-align: center;\n" +
+        "      }\n" +
+        "\n" +
+        "      h1 span {\n" +
+        "        color: #bbb;\n" +
+        "      }\n" +
+        "\n" +
+        "      h3 {\n" +
+        "        margin: 1.5em 0 0.5em;\n" +
+        "      }\n" +
+        "\n" +
+        "      p {\n" +
+        "        margin: 1em 0;\n" +
+        "      }\n" +
+        "\n" +
+        "      ul {\n" +
+        "        padding: 0 0 0 40px;\n" +
+        "        margin: 1em 0;\n" +
+        "      }\n" +
+        "\n" +
+        "      .container {\n" +
+        "        max-width: 380px;\n" +
+        "        margin: 0 auto;\n" +
+        "      }\n" +
+        "\n" +
+        "      /* google search */\n" +
+        "\n" +
+        "      #goog-fixurl ul {\n" +
+        "        list-style: none;\n" +
+        "        padding: 0;\n" +
+        "        margin: 0;\n" +
+        "      }\n" +
+        "\n" +
+        "      #goog-fixurl form {\n" +
+        "        margin: 0;\n" +
+        "      }\n" +
+        "\n" +
+        "      #goog-wm-qt,\n" +
+        "      #goog-wm-sb {\n" +
+        "        border: 1px solid #bbb;\n" +
+        "        font-size: 16px;\n" +
+        "        line-height: normal;\n" +
+        "        vertical-align: top;\n" +
+        "        color: #444;\n" +
+        "        border-radius: 2px;\n" +
+        "      }\n" +
+        "\n" +
+        "      #goog-wm-qt {\n" +
+        "        width: 220px;\n" +
+        "        height: 20px;\n" +
+        "        padding: 5px;\n" +
+        "        margin: 5px 10px 0 0;\n" +
+        "        box-shadow: inset 0 1px 1px #ccc;\n" +
+        "      }\n" +
+        "\n" +
+        "      #goog-wm-sb {\n" +
+        "        display: inline-block;\n" +
+        "        height: 32px;\n" +
+        "        padding: 0 10px;\n" +
+        "        margin: 5px 0 0;\n" +
+        "        white-space: nowrap;\n" +
+        "        cursor: pointer;\n" +
+        "        background-color: #f5f5f5;\n" +
+        "        background-image: -webkit-linear-gradient(rgba(255,255,255,0), #f1f1f1);\n" +
+        "        background-image: -moz-linear-gradient(rgba(255,255,255,0), #f1f1f1);\n" +
+        "        background-image: -ms-linear-gradient(rgba(255,255,255,0), #f1f1f1);\n" +
+        "        background-image: -o-linear-gradient(rgba(255,255,255,0), #f1f1f1);\n" +
+        "        -webkit-appearance: none;\n" +
+        "        -moz-appearance: none;\n" +
+        "        appearance: none;\n" +
+        "      }\n" +
+        "\n" +
+        "      #goog-wm-sb:hover,\n" +
+        "      #goog-wm-sb:focus {\n" +
+        "        border-color: #aaa;\n" +
+        "        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);\n" +
+        "        background-color: #f8f8f8;\n" +
+        "      }\n" +
+        "\n" +
+        "      #goog-wm-qt:hover,\n" +
+        "      #goog-wm-qt:focus {\n" +
+        "        border-color: #105cb6;\n" +
+        "        outline: 0;\n" +
+        "        color: #222;\n" +
+        "      }\n" +
+        "\n" +
+        "      input::-moz-focus-inner {\n" +
+        "        padding: 0;\n" +
+        "        border: 0;\n" +
+        "      }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=container&gt;&lt;h1&gt;Not found &lt;span&gt;:(&lt;/span&gt;&lt;/h1&gt;&lt;p&gt;Sorry, but the page you were trying to view does not exist.&lt;/p&gt;&lt;p&gt;It looks like this was the result of either:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;a mistyped address&lt;/li&gt;&lt;li&gt;an out-of-date link&lt;/li&gt;&lt;/ul&gt;&lt;script&gt;var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),GOOG_FIXURL_SITE = location.host;&lt;/script&gt;&lt;script src=//linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js&gt;&lt;/script&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"
+    );
+&nbsp;
+    $templateCache.put('calculator/views/conversion_results.html',
+        "&lt;div&gt;&lt;div&gt;Roman Numeral Value&lt;/div&gt;&lt;div class=container&gt;&lt;div class=\"row keypad-row\"&gt;&lt;div ng-bind=convertedText class=\"displayContainer converted-results\"&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;"
+    );
+&nbsp;
+    $templateCache.put('calculator/views/numeric/numeric_calculator.html',
+        "&lt;div class=jumbotron ng-controller=NumericToRomanCtrl&gt;&lt;div&gt;&lt;converted-results-directive class=pad&gt;&lt;/converted-results-directive&gt;&lt;/div&gt;&lt;div class=displayContainer&gt;&lt;div class=pad&gt;&lt;numeric-calculator numeric-display class=typeNumber placeholder=\"0\"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"container keypadContainer\"&gt;&lt;div class=row&gt;&lt;numeric-calculator numeric-keypad-directive=\"\" class=col-sm-10&gt;&lt;/numeric-calculator&gt;&lt;numeric-calculator function-keypad-directive class=col-sm-2&gt;&lt;/numeric-calculator&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;"
+    );
+&nbsp;
+    $templateCache.put('calculator/views/numeric/numeric_display.html',
+        "&lt;span class=\"midfg xlarge\"&gt;&lt;input id=numericInput class=displayInput ng-model=field placeholder=0&gt;&lt;div ng-bind=operation&gt;&lt;/div&gt;&lt;/span&gt;"
+    );
+&nbsp;
+    $templateCache.put('calculator/views/roman/roman_calculator.html',
+        "&lt;div class=jumbotron ng-controller=RomanToNumericCtrl&gt;&lt;div&gt;&lt;converted-results-directive class=pad&gt;&lt;/converted-results-directive&gt;&lt;/div&gt;&lt;div class=displayContainer&gt;&lt;div class=pad&gt;&lt;roman-calculator roman-display class=typeNumber placeholder=\"0\"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"container keypadContainer\"&gt;&lt;div class=row&gt;&lt;roman-calculator roman-keypad-directive class=col-sm-10&gt;&lt;/roman-calculator&gt;&lt;roman-calculator roman-function-keypad-directive class=col-sm-2&gt;&lt;/roman-calculator&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;"
+    );
+&nbsp;
+    $templateCache.put('calculator/views/roman/roman_display.html',
+        "&lt;span class=\"midfg xlarge\"&gt;&lt;input id=numericInput class=displayInput ng-model=field placeholder=0&gt;&lt;div ng-bind=operation&gt;&lt;/div&gt;&lt;/span&gt;"
+    );
+&nbsp;
+    $templateCache.put('index.html',
+        "&lt;!doctype html&gt;&lt;html lang=en&gt;&lt;head&gt;&lt;meta charset=utf-8&gt;&lt;title&gt;&lt;/title&gt;&lt;meta name=description content=\"\"&gt;&lt;meta name=viewport content=\"width=device-width\"&gt;&lt;link rel=stylesheet href=\"bower_components/angular-ui-switch/angular-ui-switch.css\"&gt;&lt;link rel=stylesheet href=styles/main.css&gt;&lt;link rel=stylesheet href=\"/bower_components/bootstrap/dist/css/bootstrap.min.css\"&gt;&lt;/head&gt;&lt;body ng-app=calcuratorusApp&gt;&lt;!--[if lte IE 8]&gt;&lt;p class=\"browsehappy\"&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. Please &lt;a href=\"http://browsehappy.com/\"&gt;upgrade\n" +
+        "  your browser&lt;/a&gt; to improve your experience.&lt;/p&gt;&lt;![endif]--&gt;&lt;div class=header&gt;&lt;div class=\"navbar navbar-default\" role=navigation&gt;&lt;div class=container&gt;&lt;div class=navbar-header&gt;&lt;button type=button class=\"navbar-toggle collapsed\" data-toggle=collapse data-target=#js-navbar-collapse&gt;&lt;span class=sr-only&gt;Toggle navigation&lt;/span&gt; &lt;span class=icon-bar&gt;&lt;/span&gt; &lt;span class=icon-bar&gt;&lt;/span&gt; &lt;span class=icon-bar&gt;&lt;/span&gt;&lt;/button&gt; &lt;a class=navbar-brand href=\"#/\"&gt;Calcuratorus&lt;/a&gt;&lt;/div&gt;&lt;div class=\"collapse navbar-collapse\" id=js-navbar-collapse&gt;&lt;ul class=\"nav navbar-nav\"&gt;&lt;li class=active&gt;&lt;a href=\"#/\"&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a ng-href=#/about&gt;About&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a ng-href=\"#/\"&gt;Contact&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=container&gt;&lt;div ng-view=\"\"&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=footer&gt;&lt;div class=container&gt;&lt;p&gt;&lt;span class=\"glyphicon glyphicon-heart\"&gt;&lt;/span&gt; from the Yeoman team&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;script&gt;!function (A, n, g, u, l, a, r) {\n" +
+        "    A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {\n" +
+        "              (A[l].q = A[l].q || []).push(arguments)\n" +
+        "            }, A[l].l = +new Date, a = n.createElement(g),\n" +
+        "            r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)\n" +
+        "  }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');\n" +
+        "\n" +
+        "  ga('create', 'UA-XXXXX-X');\n" +
+        "  ga('send', 'pageview');&lt;/script&gt;&lt;script src=bower_components/jquery/dist/jquery.js&gt;&lt;/script&gt;&lt;script src=bower_components/angular/angular.js&gt;&lt;/script&gt;&lt;script src=bower_components/angular-animate/angular-animate.js&gt;&lt;/script&gt;&lt;script src=bower_components/angular-cookies/angular-cookies.js&gt;&lt;/script&gt;&lt;script src=bower_components/angular-resource/angular-resource.js&gt;&lt;/script&gt;&lt;script src=bower_components/angular-route/angular-route.js&gt;&lt;/script&gt;&lt;script src=bower_components/angular-sanitize/angular-sanitize.js&gt;&lt;/script&gt;&lt;script src=bower_components/angular-touch/angular-touch.js&gt;&lt;/script&gt;&lt;script src=bower_components/angular-bootstrap/ui-bootstrap-tpls.js&gt;&lt;/script&gt;&lt;script src=bower_components/lodash/lodash.js&gt;&lt;/script&gt;&lt;script src=bower_components/angular-ui-switch/angular-ui-switch.js&gt;&lt;/script&gt;&lt;script src=bower_components/bootstrap/dist/js/bootstrap.js&gt;&lt;/script&gt;&lt;script src=bower_components/angular-ui-router/release/angular-ui-router.js&gt;&lt;/script&gt;&lt;script src=main/app.js&gt;&lt;/script&gt;&lt;script src=main/services/lodash_service.js&gt;&lt;/script&gt;&lt;script src=main/controllers/main-ctrl.js&gt;&lt;/script&gt;&lt;script src=main/controllers/about.js&gt;&lt;/script&gt;&lt;script src=build/templates.js&gt;&lt;/script&gt;&lt;script src=calculator/controllers/numeric/numeric-calculator-ctrl.js&gt;&lt;/script&gt;&lt;script src=calculator/directives/converted-results-directive.js&gt;&lt;/script&gt;&lt;script src=calculator/directives/numeric/numeric-calculator-directive.js&gt;&lt;/script&gt;&lt;script src=calculator/directives/numeric/numeric-calculator-display.js&gt;&lt;/script&gt;&lt;script src=calculator/controllers/numeric/numeric-to-roman-ctrl.js&gt;&lt;/script&gt;&lt;script src=calculator/controllers/roman/roman-calculator-ctrl.js&gt;&lt;/script&gt;&lt;script src=calculator/controllers/roman/roman-to-numeric-ctrl.js&gt;&lt;/script&gt;&lt;script src=calculator/directives/roman/roman-calculator-directive.js&gt;&lt;/script&gt;&lt;script src=calculator/directives/roman/roman-calculator-display.js&gt;&lt;/script&gt;&lt;script src=common/services/utils.js&gt;&lt;/script&gt;&lt;script src=common/services/roman_numeral_conversion_service.js&gt;&lt;/script&gt;&lt;script src=keypad/directives/function-keypad-directive.js&gt;&lt;/script&gt;&lt;script src=keypad/directives/numeric/numeric-keypad-directive.js&gt;&lt;/script&gt;&lt;script src=keypad/directives/roman/roman-keypad-directive.js&gt;&lt;/script&gt;&lt;script src=keypad/directives/roman/roman-function-keypad-directive.js&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"
+    );
+&nbsp;
+    $templateCache.put('keypad/views/function_keypad.html',
+        "&lt;div class=keypad&gt;&lt;div class=row&gt;&lt;div class=col-sm-2&gt;&lt;button type=button class=\"btn btn-primary btn-keypad\" value=\"/\" ng-click=handleFunction($event)&gt;&amp;divide;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"row keypad-row\"&gt;&lt;div class=col-sm-2&gt;&lt;button type=button class=\"btn btn-primary btn-keypad\" value=* ng-click=handleFunction($event)&gt;&amp;times;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"row keypad-row\"&gt;&lt;div class=col-sm-2&gt;&lt;button type=button class=\"btn btn-primary btn-keypad\" value=- ng-click=handleFunction($event)&gt;&amp;minus;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"row keypad-row\"&gt;&lt;div class=col-sm-2&gt;&lt;button type=button class=\"btn btn-primary btn-keypad\" value=+ ng-click=handleFunction($event)&gt;&amp;plus;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"row keypad-row\"&gt;&lt;div class=col-sm-6&gt;&lt;button type=button class=\"btn btn-primary btn-keypad\" value=\"=\" ng-click=handleEquals()&gt;&amp;equals;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;"
+    );
+&nbsp;
+    $templateCache.put('keypad/views/numeric_keypad.html',
+        "&lt;div class=\"container keypad-container\"&gt;&lt;div class=row&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=1 ng-click=handleKeypadInput($event)&gt;1&lt;/button&gt;&lt;/div&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=2 ng-click=handleKeypadInput($event)&gt;2&lt;/button&gt;&lt;/div&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=3 ng-click=handleKeypadInput($event)&gt;3&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"row keypad-row\"&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=4 ng-click=handleKeypadInput($event)&gt;4&lt;/button&gt;&lt;/div&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=5 ng-click=handleKeypadInput($event)&gt;5&lt;/button&gt;&lt;/div&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=6 ng-click=handleKeypadInput($event)&gt;6&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"row keypad-row\"&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=7 ng-click=handleKeypadInput($event)&gt;7&lt;/button&gt;&lt;/div&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=8 ng-click=handleKeypadInput($event)&gt;8&lt;/button&gt;&lt;/div&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=9 ng-click=handleKeypadInput($event)&gt;9&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"row keypad-row\"&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=clear ng-click=handleKeypadClear()&gt;Clear&lt;/button&gt;&lt;/div&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=0 ng-click=handleKeypadInput($event)&gt;0&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;"
+    );
+&nbsp;
+    $templateCache.put('keypad/views/roman_keypad.html',
+        "&lt;div class=container style=\"width: 400px\"&gt;&lt;div class=row&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=1 ng-click=handleKeypadInput($event)&gt;I&lt;/button&gt;&lt;/div&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=2 ng-click=handleKeypadInput($event)&gt;II&lt;/button&gt;&lt;/div&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=3 ng-click=handleKeypadInput($event)&gt;III&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"row keypad-row\"&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=5 ng-click=handleKeypadInput($event)&gt;V&lt;/button&gt;&lt;/div&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=10 ng-click=handleKeypadInput($event)&gt;X&lt;/button&gt;&lt;/div&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=50 ng-click=handleKeypadInput($event)&gt;L&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"row keypad-row\"&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=100 ng-click=handleKeypadInput($event)&gt;C&lt;/button&gt;&lt;/div&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=500 ng-click=handleKeypadInput($event)&gt;D&lt;/button&gt;&lt;/div&gt;&lt;div class=col-sm-4&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=1000 ng-click=handleKeypadInput($event)&gt;M&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=\"row keypad-row\"&gt;&lt;div class=col-sm-12&gt;&lt;button type=button class=\"btn btn-primary btnRoman\" value=clear ng-click=handleKeypadClear()&gt;Clear&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;"
+    );
+&nbsp;
+    $templateCache.put('main/views/about.html',
+        "&lt;p&gt;This is the about view.&lt;/p&gt;"
+    );
+&nbsp;
+    $templateCache.put('main/views/main.html',
+        "&lt;form&gt;&lt;switch id=enabled name=enabled ng-model=enabled class=green&gt;&lt;/switch&gt;&lt;br&gt;Enabled: {{ enabled }}&lt;/form&gt;&lt;uib-tabset&gt;&lt;hr&gt;&lt;uib-tab heading=\"Number To Roman Calculator\"&gt;&lt;div ng-include=\"'calculator/views/numeric/numeric_calculator.html'\"&gt;&lt;/div&gt;&lt;/uib-tab&gt;&lt;uib-tab heading=\"Roman To Number Calculator\"&gt;&lt;div ng-include=\"'calculator/views/roman/roman_calculator.html'\"&gt;&lt;/div&gt;&lt;/uib-tab&gt;&lt;/uib-tabset&gt;&lt;hr&gt;"
+    );
+&nbsp;
+    $templateCache.put('main/views/yeoman.html',
+        "&lt;div class=jumbotron&gt;&lt;h1&gt;'Allo, 'Allo!&lt;/h1&gt;&lt;p class=lead&gt;&lt;img src=images/yeoman.png alt=\"I'm Yeoman\"&gt;&lt;br&gt;Always a pleasure scaffolding your apps.&lt;/p&gt;&lt;p&gt;&lt;a class=\"btn btn-lg btn-success\" ng-href=\"#/\"&gt;Splendid!&lt;span class=\"glyphicon glyphicon-ok\"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class=\"row marketing\"&gt;&lt;h4&gt;HTML5 Boilerplate&lt;/h4&gt;&lt;p&gt;HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.&lt;/p&gt;&lt;h4&gt;Angular&lt;/h4&gt;&lt;p&gt;AngularJS is a toolset for building the framework most suited to your application development.&lt;/p&gt;&lt;h4&gt;Karma&lt;/h4&gt;&lt;p&gt;Spectacular Test Runner for JavaScript.&lt;/p&gt;&lt;/div&gt;"
+    );
+&nbsp;
+}]);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Nov 15 2015 21:15:19 GMT-0600 (CST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
