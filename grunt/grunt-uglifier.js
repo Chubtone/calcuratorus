@@ -34,7 +34,7 @@ module.exports = function (grunt, app) {
                 //https://github.com/gruntjs/grunt-contrib-uglify/issues/298
                 compress: {},
                 beautify: false,
-                mangle: false,
+                mangle: true,
                 sourceMap: true,
                 preserveComments: false,
                 //banner: '/*! <%= pkg.name %> - v<%= pkg.version %> */'
