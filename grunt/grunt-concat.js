@@ -15,7 +15,7 @@ module.exports = function (grunt, app) {
             },
             files: [
             {
-                src: ['app/**/*.js'],
+                src: ['app/main/app.js', 'app/calculator/**/*.js', 'app/common/**/*.js', 'app/keypad/**/*.js', 'app/main/**/*.js'],
                 dest: 'app/build/applib-debug.js'
             }
             ]
