@@ -43,6 +43,23 @@ module.exports = function (grunt, app) {
                 'app/build/vendor.min.js': [
                     'app/build/vendor.concat.js']
             }
+        },
+        templates: {
+            config: {
+
+            },
+            options: {
+                compress: {},
+                beautify: false,
+                mangle: true,
+                sourceMap: false,
+                preserveComments: false,
+                //banner: '/*! <%= pkg.name %> - v<%= pkg.version %> */'
+            },
+            files: {
+                'app/build/templates.min.js': [
+                    'app/build/templates.js']
+            }
         }
     };
 
