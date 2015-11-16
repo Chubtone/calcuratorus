@@ -4,8 +4,7 @@
     The version number is taken from the package.json file found in the root of WebUX
     @see //https://github.com/gruntjs/grunt-contrib-uglify
 */
-module.exports = function (grunt) {
-
+module.exports = function (grunt, app) {
     var config = {
         applib: {
             config: {
@@ -19,28 +18,11 @@ module.exports = function (grunt) {
                 sourceMap: true,
                 sourceMapIncludeSources: false,
                 preserveComments: false,
-                banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd HH:MM TT") %> */'
+                //banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd HH:MM TT") %> */'
             },
             files: {
-                'build/applib.js': [
-                    'build/applib-debug.js'
-                ]
-            }
-        },
-        appconfig: {
-            options: {
-                compress: {},
-                beautify: false,
-                mangle: false,
-                sourceMap: true,
-                sourceMapIncludeSources: false,
-                preserveComments: false,
-                banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd HH:MM TT") %> */'
-            },
-            files: {
-                'build/dell.premier.app.ng-min.js': [
-                    'js/app.js',
-                    'build/templates.js'
+                'app/build/applib.js': [
+                    'app/build/applib-debug.js'
                 ]
             }
         },
@@ -55,11 +37,11 @@ module.exports = function (grunt) {
                 mangle: false,
                 sourceMap: true,
                 preserveComments: false,
-                banner: '/*! <%= pkg.name %> - v<%= pkg.version %> */'
+                //banner: '/*! <%= pkg.name %> - v<%= pkg.version %> */'
             },
             files: {
-                'build/vendor.min.js': [
-                    'build/vendor.concat.js']
+                'app/build/vendor.min.js': [
+                    'app/build/vendor.concat.js']
             }
         }
     };

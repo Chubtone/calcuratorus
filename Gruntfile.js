@@ -14,6 +14,7 @@ module.exports = function (grunt) {
     'grunt-karma',
     'grunt-contrib-jshint',
     'grunt-jsbeautifier',
+    'grunt-contrib-uglify'
   ].forEach(function (task) { grunt.loadNpmTasks(task); });
 
 
@@ -27,7 +28,11 @@ module.exports = function (grunt) {
     cdnify: 'grunt-google-cdn'
   });
 
-  // Configurable paths for the application
+    // Get common configuration info
+    var app = require('./grunt//common')(grunt);
+
+
+    // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
     dist: 'dist'
@@ -125,8 +130,6 @@ module.exports = function (grunt) {
         }
       }
     },
-
-
 
     // Make sure code styles are up to par
     jscs: {
@@ -424,6 +427,8 @@ module.exports = function (grunt) {
       }
     },
 
+
+
     //Read jsbeautifier from ext file
     jsbeautifier: require('./grunt//grunt-jsbeautifier')(grunt),
 
@@ -432,6 +437,12 @@ module.exports = function (grunt) {
 
     //Read karma from ext file
     karma: require('./grunt//grunt-karma')(grunt),
+
+    //Read concat from ext file
+    concat: require('./grunt//grunt-concat')(grunt, app),
+
+    //Read karma from ext file
+    uglify: require('./grunt//grunt-uglifier')(grunt, app)
 
   });
 
