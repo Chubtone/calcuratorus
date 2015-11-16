@@ -18,6 +18,7 @@ version 0.14.0.
 - Run `grunt jsbeautifier` to format the JavaScript files in the app
 - Run `grunt ngtemplates` to convert all of the HTML partials used in the app to JSON, and add them to the Angular $templateCache. (More here: https://docs.angularjs.org/api/ng/service/$templateCache). This allows the HTML partials to compressed, loaded into the client on app startup, and avoids the overhead of multiple HTTP requests to the web server.
 - Run `grunt jshint` to run jshint and check for common coding mistakes in the JavaScript codes
+- Run `grunt concat`, followed by `grunt uglify` to create minified files for 3rd party scripts, the application scripts, and the HTML templates file.
 
 
 ## Running the app
