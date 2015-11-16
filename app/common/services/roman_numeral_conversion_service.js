@@ -2,193 +2,72 @@ angular.module('calcuratorusApp').factory('roman_numeral_conversion', [
     function roman_numeral_conversion() {
         "use strict";
 
-        var convert100s = function(h) {
-            var m = '';
-            h = Math.floor((h % 1000) / 100);
-            if (h === 9) {
-                m = 'CM';
-            } else if (h > 4) {
-                m = 'DCCC'.substr(0, h - 4);
-            } else if (h === 4) {
-                m = 'CD';
+        var convert1s = function(value) {
+            var retVal = '';
+            value = value % 10;
+            if (value === 9) {
+                retVal = 'IX';
+            } else if (value > 4) {
+                retVal = 'VIII'.substr(0, value - 4);
+            } else if (value === 4) {
+                retVal = 'IV';
             } else {
-                m = 'CCC'.substr(0, h);
+                retVal = 'III'.substr(0, value);
             }
-            return m;
-        };
-        /*
-        var convert100a = function(h) {
-            var m = '',
-                h = Math.floor((h % 1000) / 100);
-            if (h > 4) {
-                m = 'DCCCC'.substr(0, h - 4)
-            } else {
-                m = 'CCCC'.substr(0, h)
-            };
-            return m;
-        }; */
-
-        var convert10s = function(t) {
-            var m = '';
-            t = Math.floor((t % 100) / 10);
-            if (t === 9) {
-                m = 'XC';
-            } else if (t > 4) {
-                m = 'LXXX'.substr(0, t - 4);
-            } else if (t === 4) {
-                m = 'XL';
-            } else {
-                m = 'XXX'.substr(0, t);
-            }
-            return m;
-        };
-        /*
-         var convert10a = function(t) {
-             var m = '',
-                 t = Math.floor((t % 100) / 10);
-             if (t > 4) {
-                 m = 'LXXXX'.substr(0, t - 4)
-             } else {
-                 m = 'XXXX'.substr(0, t)
-             };
-             return m;
-         } */
-
-        var convert1s = function(u) {
-            var m = '';
-            u = u % 10;
-            if (u === 9) {
-                m = 'IX';
-            } else if (u > 4) {
-                m = 'VIII'.substr(0, u - 4);
-            } else if (u === 4) {
-                m = 'IV';
-            } else {
-                m = 'III'.substr(0, u);
-            }
-            return m;
+            return retVal;
         };
 
-        /*
-        var convert1a = function(u) {
-            var m = '',
-                u = u % 10;
-            if (u > 4) {
-                m = 'VIIII'.substr(0, u - 4)
+        var convert10s = function(value) {
+            var retVal = '';
+            value = Math.floor((value % 100) / 10);
+            if (value === 9) {
+                retVal = 'XC';
+            } else if (value > 4) {
+                retVal = 'LXXX'.substr(0, value - 4);
+            } else if (value === 4) {
+                retVal = 'XL';
             } else {
-                m = 'IIII'.substr(0, u)
-            };
-            return m;
-        }; */
-
-        var convert1000s = function(n) {
-            return ('MMMM'.substr(0, (Math.floor(n / 1000))));
+                retVal = 'XXX'.substr(0, value);
+            }
+            return retVal;
         };
 
-        var converts = function(n) {
-            return (convert1000s(n) + convert100s(n) + convert10s(n) + convert1s(n));
+        var convert100s = function(value) {
+            var retVal = '';
+            //Get the remainder under 1000
+            value = Math.floor((value % 1000) / 100);
+            if (value === 9) {
+                retVal = 'CM';
+            } else if (value > 4) {
+                retVal = 'DCCC'.substr(0, value - 4);
+            } else if (value === 4) {
+                retVal = 'CD';
+            } else {
+                retVal = 'CCC'.substr(0, value);
+            }
+            return retVal;
         };
 
-        var covertNumberToRoman = function(inputValue) {
+        var convert1000s = function(value) {
+            return ('MMMM'.substr(0, (Math.floor(value / 1000))));
+        };
 
-            var msg, num = '',
-                i = 0,
-                n = 0;
+        var parseRoman = function(value) {
+            return (convert1000s(value) + convert100s(value) + convert10s(value) + convert1s(value));
+        };
 
-            //while (inputValue.charAt(0) == ' ') {inputValue = inputValue.substr(1)};
-            //if (inputValue.indexOf(' ') != -1) {inputValue = inputValue.substr(0, inputValue.indexOf(' '))}
-
-            if (inputValue === '') {
-                //alert('No data was input');
-                return '';
-            } else {
-                if (isNaN(inputValue)) {
-                    num = inputValue;
-                    if (num === num.toLowerCase()) {
-                        i = num.indexOf('u');
-                        if (i !== -1) {
-                            num = num.substr(0, i) + 'v' + num.substr(i + 1, num.length - i);
-                        }
-                        if (num.substr(num.length - 2, 2) === 'ij') {
-                            num = num.substr(0, num.length - 2) + 'ii';
-                        }
-                    }
-                    n = evalRoman(num);
-                    if (n === -1) {
-                        //alert(inputValue + ' is not a valid input');
-                        msg = '';
-                    } else {
-                        msg = n;
-                    }
-                } else {
-                    n = Math.round(parseFloat(inputValue));
-                    if (n < 1 || n > 4999) {
-                        alert('Input must be in the range of 1 to 4999');
-                        return '';
-                    } else {
-                        if (n !== parseFloat(inputValue)) {
-                            alert(inputValue + ' will be rounded to ' + n);
-                        }
-                        msg = converts(n);
-                    }
-                }
-            }
-            return msg;
-            /*
-            var result = null;
-
-            ///////
-            //Make sure value is number and integer
-            if (value && _.isNumber(value) && utils.isInteger(value)) {
-                $log.debug('Converting ' + value);
-
-                var byTwo = ((value % 2) === 0);
-
-                if (byTwo) {
-                    result = 'II';
-                }
-
-                var byThree = ((value % 3) === 0);
-
-                if (byThree) {
-                    result = 'III';
-                }
-
-                var byFour = ((value % 4) === 0);
-
-                result = 'IV';
-
-                var byFive = ((value % 5) === 0);
-
-                result = 'V';
-
-                var byTen = ((value % 10) === 0);
-
-                result = 'X';
-
-                var byFifty = ((value % 50) === 0);
-
-                result = 'L';
-
-                var byHundred = ((value % 100) === 0);
-
-                result = 'X';
-
-                var byFiveHundred = ((value % 500) === 0);
-
-                result = 'D';
-
-                var byThousand = ((value % 1000) === 0);
-
-                result = 'M';
-
-            }
-
-            return result; */
+        var covertNumberToRoman = function(value) {
+            var result,
+                numberVal = Math.round(parseFloat(value));
+            result = parseRoman(numberVal);
+            return result;
         };
 
         var covertRomanToNumber = function(value) {
-            return value;
+            var result,
+                numberVal = Math.round(parseFloat(value));
+            result = parseRoman(numberVal);
+            return result;
         };
 
         return {

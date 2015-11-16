@@ -8,9 +8,9 @@ angular.module('calcuratorusApp')
         "use strict";
         return {
             restrict: "E",
-            controller: 'numericCalculatorCtrl',
+            controller: 'romanCalculatorCtrl',
             link: function() {
-                $log.debug('Parent numericCalculator directive linked');
+                $log.debug('Parent romanCalculator directive linked');
             }
         };
     }]);

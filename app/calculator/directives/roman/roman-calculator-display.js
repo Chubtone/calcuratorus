@@ -8,8 +8,8 @@ angular.module('calcuratorusApp')
             return {
                 restrict: 'A',
                 replace: true,
-                templateUrl: '../../views/numeric/numeric_display.html',
-                require: 'numericCalculator',
+                templateUrl: 'calculator/views/roman/roman_display.html',
+                require: 'romanCalculator',
                 scope: {
                     //field: '='
                 },

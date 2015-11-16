@@ -1,41 +1,51 @@
 <div class="container" style="width: 400px">
   <div class="row">
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman">I</button>
+      <button type="button" class="btn btn-primary btnRoman" value='1'
+              ng-click="handleKeypadInput($event)">I</button>
     </div>
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman">II</button>
+      <button type="button" class="btn btn-primary btnRoman" value='2'
+              ng-click="handleKeypadInput($event)">II</button>
     </div>
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman">III</button>
-    </div>
-  </div>
-  <div class="row keypad-row">
-    <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman">V</button>
-    </div>
-    <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman">X</button>
-    </div>
-    <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman">L</button>
+      <button type="button" class="btn btn-primary btnRoman" value='3'
+              ng-click="handleKeypadInput($event)">III</button>
     </div>
   </div>
   <div class="row keypad-row">
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman">C</button>
+      <button type="button" class="btn btn-primary btnRoman" value='5'
+              ng-click="handleKeypadInput($event)">V</button>
     </div>
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman">D</button>
+      <button type="button" class="btn btn-primary btnRoman" value='10'
+              ng-click="handleKeypadInput($event)">X</button>
     </div>
     <div class="col-sm-4">
-      <button type="button" class="btn btn-primary btnRoman">M</button>
+      <button type="button" class="btn btn-primary btnRoman" value='50'
+              ng-click="handleKeypadInput($event)">L</button>
+    </div>
+  </div>
+  <div class="row keypad-row">
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-primary btnRoman" value='100'
+              ng-click="handleKeypadInput($event)">C</button>
+    </div>
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-primary btnRoman" value='500'
+              ng-click="handleKeypadInput($event)">D</button>
+    </div>
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-primary btnRoman" value='1000'
+              ng-click="handleKeypadInput($event)">M</button>
     </div>
   </div>
 
   <div class="row keypad-row">
     <div class="col-sm-12">
-      <button type="button" class="btn btn-primary btnRoman">Clear</button>
+      <button type="button" class="btn btn-primary btnRoman" value='clear'
+              ng-click="handleKeypadClear()">Clear</button>
     </div>
   </div>
 

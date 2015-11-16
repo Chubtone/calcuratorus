@@ -1,20 +1,21 @@
+<div class="jumbotron" ng-controller="RomanToNumericCtrl">
+  <div >
+    <converted-results-directive class="pad"></converted-results-directive>
+  </div>
 
-
-<div class="jumbotron" ng-controller="NumericToRomanCtrl">
   <div class="displayContainer">
-        <input id="displayValue" ng-value="displayValue"></input>
+    <div class="pad">
+      <roman-calculator roman-display
+                           class="typeNumber"
+                           placeholder="0"/>
+    </div>
   </div>
 
-  <div class="pad">
-    <input ng-model="transferAmount" field="currencyVal" currency-input type="tel"
-           class="typeNumber"
-           placeholder="0.00"/>
-
-  </div>
-  <div class="container" style="width: 800px">
+  <div class="container keypadContainer">
     <div class="row">
-      <div class="col-sm-8" ng-include="'keypad/views/roman_keypad.html'"></div>
-      <div class="col-sm-4" ng-include="'keypad/views/function_keypad.html'"></div>
+      <roman-calculator roman-keypad-directive class="col-sm-10"></roman-calculator>
+      <roman-calculator roman-function-keypad-directive class="col-sm-2"></roman-calculator>
     </div>
   </div>
 </div>
+

@@ -9,46 +9,12 @@
 
 module.exports = function (grunt) {
 
-
+  //Load my external tasks
   [
-    //'grunt-karma',
-    //'grunt-contrib-concat',
-    //'grunt-contrib-uglify',
-    //'grunt-contrib-cssmin',
+    'grunt-karma',
     'grunt-contrib-jshint',
     'grunt-jsbeautifier',
-    //'grunt-contrib-jasmine',
-    //'grunt-contrib-watch',
-    //'grunt-contrib-clean',
-    //'grunt-cache-breaker',
-    //'grunt-contrib-copy',
-    //'grunt-string-replace',
-    'grunt-angular-templates'
-    //'grunt-htmllint'
   ].forEach(function (task) { grunt.loadNpmTasks(task); });
-
-  // Get common configuration info
-  /*var app = require('./grunt//common')(grunt);
-
-  var config = {
-    "pkg": grunt.file.readJSON('package.json'),
-    "jsbeautifier": require('./grunt//grunt-jsbeautifier')(grunt),
-    //"concat": require('./grunt//grunt-concat')(grunt, app),
-    //"uglify": require('./grunt//grunt-uglifier')(grunt),
-    //"cssmin": require('./grunt//grunt-css-min')(grunt),
-    //"jshint": require('./grunt//grunt-jshint')(grunt),
-    //"karma": require('./grunt//grunt-karma')(grunt),
-    //"jasmine": require('./grunt//grunt-jasmine')(grunt),
-    //"watch": require('./grunt//grunt-watch')(grunt),
-    //"clean": require('./grunt//grunt-clean')(grunt),
-    //"cachebreaker": require('./grunt//grunt-cache-breaker')(grunt),
-    //"copy": require('./grunt//grunt-copy')(grunt, app),
-    //"string-replace": require('./grunt//grunt-string-replace')(grunt, app),
-    'ngtemplates': require('./grunt//grunt-angular-templates')(grunt, app)
-    //'htmllint': require('./grunt//grunt-htmllint')(grunt, app)
-  };*/
-
-
 
 
   // Time how long tasks take. Can help when optimizing build times
@@ -57,7 +23,7 @@ module.exports = function (grunt) {
   // Automatically load required Grunt tasks
   require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin',
-    //ngtemplates: 'grunt-angular-templates',
+    ngtemplates: 'grunt-angular-templates',
     cdnify: 'grunt-google-cdn'
   });
 
@@ -363,12 +329,21 @@ module.exports = function (grunt) {
       dist: {
         options: {
           module: 'calcuratorusApp',
-          htmlmin: '<%= htmlmin.dist.options %>',
+          htmlmin: {
+            collapseBooleanAttributes: true,
+            collapseWhitespace: true,
+            removeAttributeQuotes: true,
+            removeComments: true, // Only if you don't use comment directives!
+            removeEmptyAttributes: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true
+          },
           usemin: 'scripts/scripts.js'
         },
         cwd: '<%= yeoman.app %>',
         src: '**/{,*/}*.html',
-        dest: '.tmp/templateCache.js'
+        dest: 'app/build/templates.js',
       }
     },
 
@@ -449,11 +424,12 @@ module.exports = function (grunt) {
       }
     },
 
+    //Read jsbeautifier from ext file
     jsbeautifier: require('./grunt//grunt-jsbeautifier')(grunt),
 
+    //Read jshint from ext file
     jshint: require('./grunt//grunt-jshint')(grunt),
 
-    ngtemplates2: require('./grunt//grunt-angular-templates')(grunt)
   });
 
 
